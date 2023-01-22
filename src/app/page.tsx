@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import Header from "./header";
+import Cards from "@/pages/home/cards";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,7 +37,7 @@ export default function Home() {
         </div>
       </div>
       <section className="flex flex-col  gap-10 mt-20">
-        <div className="flex flex-col gap-2 justify-center items-center">
+        <div className="flex flex-col gap-2 ">
           <h2 className="text-3xl font-bold text-gray-800">
             Focus on what matters most
           </h2>
@@ -44,6 +45,7 @@ export default function Home() {
             Some of Mindify's key Features
           </span>
         </div>
+        <Cards/>
       </section>
     </div>
   );
