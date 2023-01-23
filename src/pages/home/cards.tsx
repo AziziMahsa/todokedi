@@ -2,40 +2,48 @@ import Image from "next/image";
 const cardsDetails = [
   {
     imgSrc: "/images/Time-PNG-HD.png",
-    text1: "Never miss a beat",
-    text2: "Keep deadlines by reminders",
+    title: "Never miss a beat",
+    desc: "Keep deadlines by reminders",
   },
   {
-    imgSrc: "/images/calender-image-png-33.png",
-    text1: "Plane and manage your day",
-    text2: "Start your morning with a clean slate",
+    imgSrc: "/images/calendar-image-png-33.png",
+    title: "Plane and manage your day",
+    desc: "Start your morning with a clean slate",
   },
   {
     imgSrc: "/images/morning-mails.webp",
-    text1: "With you every where",
-    text2: "Accessible across all of your devices",
+    title: "With you every where",
+    desc: "Accessible across all of your devices",
   },
   {
     imgSrc: "/images/organize.png",
-    text1: "Keep organized",
-    text2: "Categorize your mind into catrgories",
+    title: "Keep organized",
+    desc: "Categorize your mind into catrgories",
   },
   {
     imgSrc: "/images/neverforget.png",
-    text1: "Never forget a thing",
-    text2: "Quickly add your tasks, notes,expenses",
+    title: "Never forget a thing",
+    desc: "Quickly add your tasks, notes,expenses",
   },
   {
     imgSrc: "/images/findfast.png",
-    text1: "Find everything, fast",
-    text2: "Quickly search through ",
+    title: "Find everything, fast",
+    desc: "Quickly search through your items with on tap",
   },
 ];
 function Cards() {
   return (
-    <div className=" flex flex-col gap-2  h-fit w-fit p-5">
-      <Image src="/images/photoone.png" alt="Picture" width={50} height={50} />
-    </div>
+    <div className="grid grid-cols-3 items-center ">
+       {cardsDetails.map((detail, index)=>{
+        return(
+          <div className="flex flex-col gap-2  justify-center items-center h-fit w-fit p-5" key={index}>
+          <Image className="h-28 w-28" src={detail.imgSrc} alt="Picture" width={50} height={50} />
+          <span className="text-sm font-semibold">{detail.title}</span>
+          <span className="text-xs text-gray-400  ">{detail.desc}</span>
+        </div>
+        )
+      })}
+    </div>  
   );
 }
 
