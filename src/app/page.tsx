@@ -2,9 +2,7 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import Header from "./header";
 import Cards from "@/pages/home/cards";
-
 const inter = Inter({ subsets: ["latin"] });
-
 export default function Home() {
   return (
     <div>
@@ -42,10 +40,10 @@ export default function Home() {
             Focus on what matters most
           </h2>
           <span className="text-lg   text-gray-400">
-            Some of Mindify's key Features
+            Some of Mindifys key Features
           </span>
         </div>
-        <Cards/>
+        <Cards />
       </section>
     </div>
   );
